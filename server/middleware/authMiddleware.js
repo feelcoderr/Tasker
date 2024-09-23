@@ -1,4 +1,3 @@
-// middleware/authMiddleware.js
 const { verifyToken } = require("../utils/jwt");
 const User = require("../models/user");
 

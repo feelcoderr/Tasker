@@ -1,4 +1,3 @@
-// routes/userRoutes.js
 const express = require("express");
 const User = require("../models/user");
 const { generateToken, verifyToken } = require("../utils/jwt");
@@ -26,7 +25,6 @@ router.post("/login", async (req, res) => {
   res.json({ user, token });
 });
 
-// Protect routes using authMiddleware
 router.get("/profile", authMiddleware, (req, res) => {
   res.json(req.user);
 });
